@@ -1,0 +1,58 @@
+@host = http://localhost:8080
+
+
+
+### Get all available land
+GET {{host}}/api/v1/irrigation/land
+
+### Get a land with the given Id,
+GET {{host}}/api/v1/irrigation/land/1
+
+### Create a new land with schedule
+POST {{host}}/api/v1/irrigation/land
+Content-Type: application/json
+
+{
+    "description":"Maize Plantation",
+    "irrigationDuration":60,
+    "size": 36,
+    "unit": "SQM",
+    "soilType": "LOAMY",
+    "volumeOfWater":3000,
+    "schedules": [
+        {"dayOfWeek":"MONDAY","startAt":"17:00:00"},
+        {"dayOfWeek":"WEDNESSDAY","startAt":"09:00:00"}
+    ]
+}
+
+### Create a new land without schedule
+POST {{host}}/api/v1/irrigation/land
+Content-Type: application/json
+
+{
+    "description":"Maize Plantation",
+    "irrigationDuration":60,
+    "size": 36,
+    "unit": "SQM",
+    "soilType": "LOAMY",
+    "volumeOfWater":3000
+}
+
+### Update a land. The id can be changed to any valid id
+
+PUT {{host}}/api/v1/irrigation/land/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "size": 36,
+    "volumeOfWater": 3000,
+    "description": "Indomie Plantation",
+    "soilType": "SANDY",
+    "unit": "SQM",
+    "irrigationDuration": 60
+}
+
+### Delete a land with the given Id. this operation will delete the land and the 
+##  associated schedule
+DELETE {{host}}/api/v1/irrigation/land/1

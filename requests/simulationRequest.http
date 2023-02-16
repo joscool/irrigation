@@ -1,0 +1,9 @@
+
+@host = http://localhost:8080
+
+
+
+### This endpoint will upload all the schedules for each land to
+### to the mock sensor. The sensor will then trigger a job to begin irrigation.
+### Look at the terminal after invoking this endpoint to see the mock irrigation progress.
+GET {{host}}/api/v1/irrigation/schedule
