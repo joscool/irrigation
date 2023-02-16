@@ -22,4 +22,5 @@ The following assumptions are made:
 3. Install REST Client https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 4. Open terminal in Visual Studio Code to the project root directory and then run command **./mvnw spring-boot:run** . Then wait a few secs for the app to spin up
 5. Open the **requests** folder and then run the requests in the landRequest.http. Please make sure you complete step 3 else you will not be able to test the endpoints.
+6. To simulate irrigation, run the GET request in simulationRequest.http. It will trigger a job scheduler for the schedules configured for each land.
 
