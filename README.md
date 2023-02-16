@@ -16,6 +16,7 @@ The following assumptions are made:
 * Add audit log to keep history of all the irrigations
 * add created_at and modified_at to tables Land and Schedule and fields that could be used to calculate volume of water needed automatically
 
+### How to run
 1. Clone the project
 2. Open the project with Visual Studio Code
 3. Install REST Client https://marketplace.visualstudio.com/items?itemName=humao.rest-client
